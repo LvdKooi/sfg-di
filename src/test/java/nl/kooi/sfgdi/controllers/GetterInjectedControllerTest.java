@@ -4,13 +4,13 @@ import nl.kooi.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class SetterInjectedControllerTest {
+class GetterInjectedControllerTest {
 
-    SetterInjectedController controller;
+    GetterInjectedController controller;
 
     @BeforeEach
     void setUp() {
-        controller = new SetterInjectedController();
+        controller = new GetterInjectedController();
         controller.setGreetingService(new ConstructorGreetingService());
     }
 
