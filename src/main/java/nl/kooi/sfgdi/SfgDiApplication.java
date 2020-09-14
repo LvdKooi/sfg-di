@@ -1,9 +1,7 @@
 package nl.kooi.sfgdi;
 
-import nl.kooi.sfgdi.controllers.ConstructorInjectedController;
-import nl.kooi.sfgdi.controllers.GetterInjectedController;
 import nl.kooi.sfgdi.controllers.MyController;
-import nl.kooi.sfgdi.controllers.PropertyInjectedController;
+import nl.kooi.sfgdi.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,10 +15,9 @@ public class SfgDiApplication {
 
         MyController controller = (MyController) ctx.getBean("myController");
 
-        System.out.println(controller.hello());
-        System.out.println(ctx.getBean(PropertyInjectedController.class).getGreeting());
-        System.out.println(ctx.getBean(GetterInjectedController.class).getGreeting());
-        System.out.println(ctx.getBean(ConstructorInjectedController.class).getGreeting());
+        FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+        System.out.println(fakeDataSource.getUser());
+
     }
 
 }
