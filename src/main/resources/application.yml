@@ -1,0 +1,10 @@
+spring.profiles.active: en
+
+guru:
+  username:  laurens
+  password:  password
+  dburl: blabla
+  jms:
+    username:  jms_laurens
+    password:  jms_password
+    dburl: jms_blabla
