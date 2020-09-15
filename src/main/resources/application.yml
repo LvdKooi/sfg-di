@@ -1,10 +1,19 @@
 spring.profiles.active: en
 
 guru:
-  username:  laurens
+  username:  laurens-in-english
   password:  password
   dburl: blabla
-  jms:
-    username:  jms_laurens
-    password:  jms_password
-    dburl: jms_blabla
+
+
+#  3 dashes means new file, in this way you can combine properties yamls in one file
+---
+
+
+spring.profiles.active: es
+
+guru:
+  username:  laurens-in-spanish
+  password:  password
+  dburl: blabla
+
